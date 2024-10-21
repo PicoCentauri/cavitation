@@ -1,0 +1,4 @@
+# Python requirements to run the scipts within this repository
+numpy
+MDAnalysis
+scipy

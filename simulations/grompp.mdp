@@ -1,0 +1,46 @@
+
+; Running
+integrator               = md 
+nsteps                   = //STEPS//
+dt                       = 0.002
+
+; Linear: Remove center of mass translation
+comm_mode		 = linear
+
+; comm_grps: group(s) for center of mass motion removal, default is the whole system
+comm_grps		 = system;XX1 XX2
+
+nstxout-compressed        = 1000
+nstlog                    = 100000
+nstenergy                 = 100
+
+constraints              = hbonds 
+
+nstlist                  = 10
+coulombtype              = pme
+pme_order                = 4
+
+; distance for the Coulomb cut-off
+rcoulomb                 = 0.9
+
+; cut-off distance for the short-range neighbor list
+rlist                    = 0.9
+
+; distance for the LJ or Buckingham cut-off
+rvdw                     = 0.9
+
+; group(s) to write to energy file 
+;energygrps               = XX1 XX2 SOL 
+
+tcoupl                   = v-rescale
+tc_grps                  = XX1 XX2 SOL 
+tau_t                    = 0.1 0.1 0.1
+ref_t                    = 300 300 300
+
+; berendsen - Exponential relaxation pressure coupling with time constant tau_p [ps]
+pcoupl			 = Berendsen
+Pcoupltype               = semiisotropic
+tau_p			 = 1.0
+ref_p			 = 0 //PRESSURE//
+compressibility	   	 = 0 4.5e-5
+refcoord-scaling         = all
