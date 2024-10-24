@@ -1,10 +1,10 @@
 # Water cavitation  results from the kinetic competition of bulk, surface and surface-defect nucleation events
 
-[![arXiv](https://img.shields.io/badge/arXiv-XXXX.XXXX-B31B1B.svg)](https://arxiv.org/abs/XXXX.XXXX)
+[![arXiv](https://img.shields.io/badge/arXiv-2410.17626-B31B1B.svg)](https://arxiv.org/abs/2410.17626)
 
 The repository includes codes and simulations parameter files used for the work "Water
 cavitation  results from the kinetic competition of bulk, surface and surface-defect
-nucleation events" available at https://arxiv.org/abs/XXX.XXX.
+nucleation events" available at https://arxiv.org/abs/2410.17626.
 
 ## Installation
 
